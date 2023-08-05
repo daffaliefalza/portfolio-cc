@@ -1,12 +1,21 @@
-:root { 
-    --color-background: #111111;
-    --color-font: #fff;
-    --color:blue: #6cace4
+:root {
+  --color-background: #111111;
+  --color-font: #fff;
+  --color-blue: #6cace4;
 }
 
 .light-mode {
-    --color-background: #fff;
-    --color-font: #111111;
+  --color-background: #fff;
+  --color-font: #111111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
 }
 
 body {
@@ -17,111 +26,215 @@ body {
 
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
 }
 
 /* reusable style */
-.container { 
-    max-width: 1100px;
-    padding: 0 20px;
-    margin: 30px auto;
+.container {
+  max-width: 1100px;
+  padding: 0 20px;
+  margin: 30px auto;
 }
 
 /* header style */
 
-header a { 
-    color: var(--color-font);
-    font-weight: 200;
-    text-decoration: none;
+header a {
+  color: var(--color-font);
+  font-weight: 200;
+  text-decoration: none;
 }
 
 header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header .container nav ul {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 header .toggle {
-      background: linear-gradient(110deg, #9845e8, #33d2ff, #dd5789);
-      padding: 4px 15px;
-      border-radius: 5px;
+  background: linear-gradient(110deg, #9845e8, #33d2ff, #dd5789);
+  padding: 4px 15px;
+  border-radius: 5px;
 }
 
 /* header style end */
 
 /* hero style */
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-     height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 }
 
-.hero .hero-title { 
-    margin: 15px 0;
-    font-size: 72px;
+.hero .hero-title {
+  margin: 15px 0;
+  font-size: 72px;
   background-clip: text;
   -webkit-background-clip: text;
-    color: transparent;
+  color: transparent;
 }
 
 .hero h4 {
-     font-weight: 200;
+  font-weight: 200;
 }
 
 .hero .hero-description {
-    font-weight: 200;
-    line-height: 1.6;
+  font-weight: 200;
+  line-height: 1.6;
 }
 
-.hero .cta { 
-    width: 18%;
-    margin-top: 15px;
-    background-color: transparent;
-    color: var(--color-font);
-    text-align: left;
-    border: none;
-    cursor: pointer;
-    font-size: 17px;
+.hero .cta {
+  width: 18%;
+  margin-top: 15px;
+  background-color: transparent;
+  color: var(--color-font);
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
 }
 
 /* animation */
 .animation {
   background: linear-gradient(110deg, #9845e8, #33d2ff, #dd5789);
-  background-size:200% auto;
-  color:#111111;
-  background-clip:text;
+  background-size: 200% auto;
+  color: #111111;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation:test 2.5s  infinite;
+  animation: test 2.5s infinite;
 }
-  @keyframes test {
-    to {
-      background-position:200% center;
-    }
+@keyframes test {
+  to {
+    background-position: 200% center;
   }
+}
 /* end animation */
 
 /* hero style end */
 
+/* projects style */
+.projects {
+  border-bottom: 1px solid grey;
+  padding-bottom: 64px;
+}
 
+.projects-title {
+  font-weight: 200;
+  margin-bottom: 40px;
+}
+
+.projects-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.projects-header {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.projects h4 {
+  margin-right: auto;
+}
+
+.projects-description {
+  margin: 15px 0;
+}
+
+.projects-tech {
+  color: var(--color-blue);
+}
+
+/* projects style end */
+
+/* resume experience style */
+.resume-experience {
+  border-bottom: 1px solid gray;
+  margin: 32px 0;
+  padding-bottom: 64px;
+}
+
+.resume-education {
+  border-bottom: 1px solid gray;
+  margin: 32px 0;
+  padding-bottom: 64px;
+}
+
+.resume-experience-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.first-experience {
+  margin-bottom: 20px;
+}
+
+.resume-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location {
+  color: var(--color-blue);
+  margin: 15px 0;
+}
+
+.experience-description {
+  font-weight: 200;
+}
+
+/* resume experience end */
+
+/* resume education style */
+.resume-education {
+  margin: 32px 0;
+  padding-bottom: 64px;
+  border-bottom: 1px solid gray;
+}
+
+.resume-education-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.first-education {
+  margin-bottom: 20px;
+}
+
+/* resume education style end */
+
+/* footer style */
+footer a {
+  color: var(--color-font);
+}
+/* footer style end */
 
 /*responsive */
-@media (max-width:768px){
+@media (max-width: 768px) {
   header .container {
-    flex-direction:column;
-    margin-top: 15px;   
+    flex-direction: column;
+    margin-top: 15px;
   }
 
-  .hero .hero-title { 
+  .hero .hero-title {
     font-size: 68px;
+  }
+
+  .projects-wrapper,
+  .resume-education-wrapper,
+  .resume-experience-wrapper {
+    grid-template-columns: 1fr;
   }
 }
 /* end responsive */
